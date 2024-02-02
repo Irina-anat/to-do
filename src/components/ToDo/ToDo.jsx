@@ -14,6 +14,8 @@ const ToDo = ({ todo, handleCheckCompleted, handleDelete}) => {
 				</div>
 				<div className='col'>
 					<button
+						//якщо todo не check, то її неможливо видалити
+						disabled={!todo.completed}
 						type='button'
 						className='btn-close'
                         aria-label='Close'
