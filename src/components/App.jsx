@@ -4,10 +4,13 @@ import ToDoList from './ToDoList/ToDoList';
 import Modal from './Modal/Modal';
 import FormLogin from './FormLogin/FormLogin';
 import { nanoid } from 'nanoid';
+import Search from './Search/Search';
+import ContentInfo from './ContentInfo/ContentInfo';
 
 class App extends Component {
   state = {
-    isShowModal: false,
+	  isShowModal: false,
+	  searchText:'',
   };
 
   showModal = () => {
@@ -27,6 +30,10 @@ class App extends Component {
 		console.log(newUser)
 	};
 
+	handleSearch = (searchText) => {
+	this.setState({searchText})	
+	}
+
 	render() {
 		return (
 			<div className='container'>
@@ -37,7 +44,9 @@ class App extends Component {
 						<FormLogin createUser={this.createUser}
 						closeModal={this.closeModal}/>
 					</Modal>
-				)}				
+				)}	
+				<Search handleSearch={this.handleSearch} />
+				<ContentInfo searchText={this.state.searchText} />
 			</div>
 		)
 	};
