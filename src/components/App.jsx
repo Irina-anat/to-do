@@ -4,6 +4,7 @@ import ToDoList from './ToDoList/ToDoList';
 import Modal from './Modal/Modal';
 import FormLogin from './FormLogin/FormLogin';
 import { nanoid } from 'nanoid';
+import { Toaster } from 'react-hot-toast';
 /* import Search from './Search/Search';
 import ContentInfo from './ContentInfo/ContentInfo'; */
 
@@ -30,6 +31,7 @@ const App = () => {
 
   return (
     <div className="container">
+      <Toaster/>
       <Header showModal={showModal} />
       <ToDoList />
       {isShowModal && (
