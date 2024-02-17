@@ -33,6 +33,10 @@ const ToDoList = () => {
   };
 
   const addToDo = value => {
+    if (!value) {
+      toast.error('The task is not written!');
+      return;
+    };
     SetTodoList(prevTodoList => {
       return [
         ...prevTodoList,
