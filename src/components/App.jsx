@@ -5,12 +5,12 @@ import Modal from './Modal/Modal';
 import FormLogin from './FormLogin/FormLogin';
 import { nanoid } from 'nanoid';
 import { Toaster } from 'react-hot-toast';
-/* import Search from './Search/Search';
-import ContentInfo from './ContentInfo/ContentInfo'; */
+//  import Search from './Search/Search';
+// import ContentInfo from './ContentInfo/ContentInfo';
 
 const App = () => {
   const [isShowModal, SetIsShowModal] = useState(false);
- // const [searchText, SetSearchText] = useState('');
+  //const [searchText, SetSearchText] = useState('');
 
   const showModal = () => SetIsShowModal(true);
 
@@ -25,9 +25,9 @@ const App = () => {
     console.log(newUser);
   }
 //CORS data
-  /* const handleSearch = searchText => {
-    SetSearchText(searchText);
-  }; */
+  //  const handleSearch = searchText => {
+  //   SetSearchText(searchText);
+  // }; 
 
   return (
     <div className="container">
@@ -39,8 +39,8 @@ const App = () => {
           <FormLogin createUser={createUser} closeModal={closeModal} />
         </Modal>
       )}
-      {/* <Search handleSearch={handleSearch} />
-      <ContentInfo searchText={searchText} /> */}
+       {/* <Search handleSearch={handleSearch} />
+      <ContentInfo searchText={searchText} />  */}
     </div>
   );
 };
