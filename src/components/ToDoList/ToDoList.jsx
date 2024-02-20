@@ -33,7 +33,7 @@ const ToDoList = () => {
   };
 
   const addToDo = value => {
-    if (!value) {
+    if (!value.trim()) {
       toast.error('The task is not written!');
       return;
     };
